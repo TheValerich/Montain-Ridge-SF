@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'pereval.apps.PerevalConfig',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
