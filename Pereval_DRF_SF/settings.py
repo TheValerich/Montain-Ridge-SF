@@ -6,11 +6,11 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-d3i*__nfgmg@(4snb*bkz_&z&ukd2upv604xu&ff@vf2*+r195'
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '158.160.77.87']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -40,8 +40,7 @@ ROOT_URLCONF = 'Pereval_DRF_SF.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -58,11 +57,11 @@ WSGI_APPLICATION = 'Pereval_DRF_SF.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('NAME'),
-        'USER': os.getenv('FSTR_DB_LOGIN'),
-        'PASSWORD': os.getenv('FSTR_DB_PASSWORD'),
-        'HOST': os.getenv('FSTR_DB_HOST'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ridge_db',
+        'USER': 'pereval',
+        'PASSWORD': 'AT9092AT9092',
+        'HOST': 'localhost',
         'PORT': os.getenv('FSTR_DB_PORT'),
     }
 }
@@ -91,7 +90,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
