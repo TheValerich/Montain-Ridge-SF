@@ -58,10 +58,10 @@ WSGI_APPLICATION = 'Pereval_DRF_SF.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ridge_db',
-        'USER': 'pereval',
-        'PASSWORD': 'AT9092AT9092',
-        'HOST': 'localhost',
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('FSTR_DB_LOGIN'),
+        'PASSWORD': os.getenv('FSTR_DB_PASSWORD'),
+        'HOST': os.getenv('FSTR_DB_HOST'),
         'PORT': os.getenv('FSTR_DB_PORT'),
     }
 }
