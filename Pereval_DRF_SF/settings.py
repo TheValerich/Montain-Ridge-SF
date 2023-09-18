@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-d3i*__nfgmg@(4snb*bkz_&z&ukd2upv604xu&ff@vf2*+r195
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '158.160.77.87']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '158.160.77.87', 'pereval-sf.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'pereval.apps.PerevalConfig',
     'django_filters',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
@@ -58,10 +59,10 @@ WSGI_APPLICATION = 'Pereval_DRF_SF.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ridge_db',
-        'USER': 'pereval',
-        'PASSWORD': 'AT9092AT9092',
-        'HOST': 'localhost',
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('FSTR_DB_LOGIN'),
+        'PASSWORD': os.getenv('FSTR_DB_PASSWORD'),
+        'HOST': os.getenv('FSTR_DB_HOST'),
         'PORT': os.getenv('FSTR_DB_PORT'),
     }
 }
