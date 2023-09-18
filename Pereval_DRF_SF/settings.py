@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-d3i*__nfgmg@(4snb*bkz_&z&ukd2upv604xu&ff@vf2*+r195
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '158.160.77.87']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '158.160.77.87', 'pereval-sf.ru']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'pereval.apps.PerevalConfig',
     'django_filters',
+    'drf_yasg'
 ]
 
 MIDDLEWARE = [
